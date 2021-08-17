@@ -4,8 +4,8 @@ WORKDIR /go/src/hello
 
 COPY . .
 
-RUN go get -d -v ./_
+RUN go get -d -v ./...
 
-RUN go install -v ./_
+RUN go install -v ./...
 
 CMD ["hello"]
