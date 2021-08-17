@@ -1,21 +1,20 @@
 name: Create Joke Issue
 
 on: push
+
 jobs:
   action:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
       - name: Random Joke Action for team
         uses: ./.github/actions/random-joke
-        id: radom-joke
-      
+        id: random-joke
+
       - name: Create Issue joke
         uses: ./.github/actions/issue-maker
         with:
-          repoToken: ${{secrets.GITHUB_TOKEN}}
-          # 파이썬 파일에서 받은 변수를 사용하는 구문이다
-          joke: ${{steps.radom-joke.outputs.joke}}
-          issueTitle: "Radom meme joke for team"
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          joke: ${{steps.random-joke.outputs.joke}}
+          issueTitle: "Random meme joke for team!!"
