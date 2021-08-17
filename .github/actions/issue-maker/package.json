@@ -10,7 +10,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@action/core": "^1.2.2",
-        "@action/github": "^2.1.0"
+        "@actions/core": "^1.2.2",
+        "@actions/github": "^2.1.0"
     }
 }
