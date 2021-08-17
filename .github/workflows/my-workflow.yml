@@ -1,9 +1,10 @@
 # This is a basic workflow to help you get started with Actions
-
+# CI 라는 워크 플로우이며 
 name: CI
 
 # Controls when the workflow will run
 on:
+  # 어떤 이벤트에 의해 트리거가 되는지 서술 - 여기선 메인에 푸시나 풀리퀘를 날리면 걸리게 된다.
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
@@ -23,6 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # 깃헙 액션이 체크아웃이 필요하다.
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
