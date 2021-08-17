@@ -5,7 +5,6 @@ description: Get Joke from random-joke and create new Issue
 inputs:
   issueTitle:
     description: Issue Title
-    required: false
   joke:
     description: Joke URL
     required: true
